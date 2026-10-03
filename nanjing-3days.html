@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>南京 10/5 出发｜仙居·神仙居 3 天精简版｜2026 国庆</title>
+<style>
+  :root{
+    --ink:#17211e;
+    --muted:#61706b;
+    --paper:#f3f5f4;
+    --surface:#fff;
+    --line:#d5dedb;
+    --green:#1f6b52;
+    --green-dark:#154b3a;
+    --orange:#bc5a2b;
+    --blue:#2c69a0;
+    --red:#b33a31;
+    --amber:#a66d00;
+    --shadow:0 14px 34px rgba(22,33,30,.1);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;color:var(--ink);background:var(--paper);font-family:"PingFang SC","Microsoft YaHei","Source Han Sans SC","Noto Sans CJK SC",sans-serif;line-height:1.68}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .hero{position:relative;min-height:78vh;display:grid;align-items:end;overflow:hidden;background:#101714;color:#fff}
+  .hero-media{position:absolute;inset:0}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 54%}
+  .hero-media::after{content:"";position:absolute;inset:0;background:rgba(9,16,14,.56)}
+  .hero-inner{position:relative;width:min(1180px,calc(100% - 40px));margin:0 auto;padding:110px 0 58px}
+  .eyebrow{display:inline-block;margin-bottom:14px;padding:6px 10px;border:1px solid rgba(255,255,255,.48);font-size:13px;letter-spacing:.06em}
+  h1{margin:0;max-width:920px;font-size:clamp(34px,6vw,70px);line-height:1.06;letter-spacing:0;font-weight:800}
+  .hero-copy{max-width:930px;margin:20px 0 0;font-size:clamp(16px,2vw,20px);color:rgba(255,255,255,.93)}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .hero-stat{padding:8px 12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font-size:13px}
+  .nav{position:sticky;top:0;z-index:20;background:rgba(243,245,244,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+  .nav-inner{width:min(1180px,calc(100% - 40px));margin:0 auto;display:flex;gap:22px;overflow-x:auto;padding:12px 0;white-space:nowrap}
+  .nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:800}
+  .nav a:hover{color:var(--green)}
+  main{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:38px 0 70px}
+  section{padding:34px 0}
+  .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,440px);gap:26px;align-items:end;margin-bottom:22px}
+  h2{margin:0;font-size:clamp(26px,4vw,42px);line-height:1.12;letter-spacing:0;font-weight:800}
+  h3{letter-spacing:0}
+  .section-head p{margin:0;color:var(--muted);font-size:15px}
+  .notice{padding:18px 20px;border-left:5px solid var(--green);background:var(--surface);border-radius:0 8px 8px 0;box-shadow:var(--shadow)}
+  .notice strong{display:block;margin-bottom:5px}
+  .notice p{margin:0;color:var(--muted)}
+  .notice.alert{border-left-color:var(--red)}
+  .notice.blue{border-left-color:var(--blue)}
+  .notice.amber{border-left-color:var(--amber)}
+  .notice + .notice{margin-top:12px}
+  .decision-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:18px;align-items:stretch}
+  .decision-main,.decision-side{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}
+  .decision-main{padding:26px}
+  .decision-side{padding:22px}
+  .decision-main h3{margin:0;font-size:27px}
+  .decision-main p{margin:12px 0 0;color:var(--muted)}
+  .decision-side h3{margin:0 0 12px;font-size:18px}
+  .cut-list,.rank-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+  .cut-list li,.rank-list li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .cut-list li:last-child,.rank-list li:last-child{border-bottom:0;padding-bottom:0}
+  .rank-no{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;font-size:13px}
+  .rank-no.red{background:var(--red)}
+  .table-wrap{overflow-x:auto;border-radius:8px;box-shadow:var(--shadow)}
+  table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);font-size:14px}
+  th,td{padding:13px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{background:#e8eeeb;color:var(--green-dark);white-space:nowrap}
+  tr:last-child td{border-bottom:0}
+  td:first-child{font-weight:800;min-width:150px}
+  .must{color:var(--red);font-weight:800;white-space:nowrap}
+  .best{color:var(--green);font-weight:800}
+  .optional{color:var(--muted)}
+  .link{color:var(--blue);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+  .button-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;background:var(--green);color:#fff;text-decoration:none;font-size:14px;font-weight:800;border-radius:4px}
+  .button.secondary{background:var(--surface);color:var(--green-dark);border:1px solid var(--line)}
+  .button:hover{filter:brightness(.96)}
+  .steps{display:grid;gap:12px;margin-top:16px}
+  .step{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+  .step-time{font-weight:900;color:var(--green);font-size:16px}
+  .step h3{margin:0;font-size:17px}
+  .step p{margin:6px 0 0;color:var(--muted);font-size:14px}
+  .day-list{display:grid;gap:14px}
+  .day{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .day-head{display:grid;grid-template-columns:130px 1fr;gap:18px;align-items:start;padding:20px 22px;border-bottom:1px solid var(--line)}
+  .day-date{font-weight:900;color:var(--green);font-size:20px}
+  .day-head h3{margin:0;font-size:21px}
+  .day-head p{margin:7px 0 0;color:var(--muted);font-size:14px}
+  .day-body{padding:18px 22px 20px}
+  .day-body ol{margin:0;padding-left:22px}
+  .day-body li{padding:5px 0;color:var(--muted)}
+  .day-body li strong{color:var(--ink)}
+  .day-note{margin-top:14px;padding:13px 15px;background:#f0f4f2;border-radius:6px;color:var(--green-dark);font-size:14px}
+  .scenery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+  .scenery-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
+  .scenery-card img{width:100%;height:230px;object-fit:cover}
+  .scenery-card div{padding:16px 17px 18px}
+  .scenery-card h3{margin:0;font-size:18px}
+  .scenery-card p{margin:7px 0 0;color:var(--muted);font-size:14px}
+  .map-shell{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+  .map-toolbar{display:flex;flex-wrap:wrap;gap:8px;padding:14px;border-bottom:1px solid var(--line);background:#fafbfa}
+  .map-day{min-height:38px;padding:7px 13px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--green-dark);font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+  .map-day:hover{border-color:var(--green)}
+  .map-day.active{background:var(--green);border-color:var(--green);color:#fff}
+  .map-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;min-height:580px}
+  #routeMap{width:100%;height:580px;background:#e7eeeb}
+  .map-side{padding:20px;border-left:1px solid var(--line);overflow:auto;background:var(--surface)}
+  .map-side h3{margin:0 0 8px;font-size:21px}
+  .map-side p{margin:0;color:var(--muted);font-size:14px}
+  .route-stops{display:grid;gap:0;margin:18px 0 0;padding:0;list-style:none}
+  .route-stops li{position:relative;display:grid;grid-template-columns:28px 1fr;gap:10px;padding:0 0 16px}
+  .route-stops li::before{content:"";position:absolute;left:13px;top:26px;bottom:0;width:2px;background:var(--line)}
+  .route-stops li:last-child::before{display:none}
+  .route-stop-no{position:relative;z-index:1;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-size:12px;font-weight:900}
+  .route-stops strong{display:block;font-size:14px}
+  .route-stops span{display:block;color:var(--muted);font-size:13px;line-height:1.55}
+  .map-key{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+  .map-key i{display:inline-block;width:20px;height:4px;margin-right:5px;vertical-align:middle;border-radius:2px}
+  .map-footnote{padding:13px 16px;border-top:1px solid var(--line);background:#fafbfa;color:var(--muted);font-size:12px}
+  .fallback-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+  .fallback-card{padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow)}
+  .fallback-card h3{margin:0 0 8px;font-size:18px}
+  .fallback-card p{margin:0;color:var(--muted);font-size:14px}
+  .sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:18px}
+  .source{display:block;padding:13px 15px;background:var(--surface);border:1px solid var(--line);border-radius:8px;color:var(--muted);text-decoration:none;font-size:13px}
+  .source strong{display:block;color:var(--ink);font-size:14px}
+  .source:hover{border-color:var(--green)}
+  footer{width:min(1180px,calc(100% - 40px));margin:0 auto;padding:26px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  @media (max-width:960px){
+    .section-head,.decision-grid,.scenery-grid,.fallback-grid,.sources,.map-layout{grid-template-columns:1fr}
+    .map-side{border-left:0;border-top:1px solid var(--line)}
+    .day-head{grid-template-columns:110px 1fr}
+  }
+  @media (max-width:640px){
+    .hero{min-height:78vh}
+    .hero-inner{padding:78px 0 44px}
+    .hero-media img{object-position:60% center}
+    .nav-inner,main,footer{width:min(100% - 26px,1180px)}
+    .step,.day-head{grid-template-columns:1fr}
+    th,td{padding:11px 10px}
+    #routeMap{height:470px}
+    .scenery-card img{height:210px}
+  }
+  @media print{
+    .nav{display:none}
+    .hero{min-height:auto;color:#000;background:#fff}
+    .hero-media{display:none}
+    .hero-inner{padding:30px 0}
+    .hero-copy,.hero-stat{color:#000}
+    .hero-stat{border-color:#999;background:#eee}
+    body{background:#fff}
+    .day,table,.decision-main,.decision-side,.notice,.fallback-card,.source,.scenery-card{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-media"><img src="./assets_zj_mountains_2026_web/shenxianju_bridge.jpg" alt="神仙居如意桥与岩峰"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">2026 国庆 · 南京 10/5 出发 · 无车 3 天版</span>
+    <h1>舍弃天台山，把 10 月 6 日完整留给神仙居</h1>
+    <p class="hero-copy">10 月 5 日从南京南直达仙居，10 月 6 日清晨进神仙居，10 月 7 日返程。返程优先买同一趟 <strong>G834</strong>：朋友在杭州西下车，你继续坐到南京南，不用在杭州换乘。</p>
+    <div class="hero-stats">
+      <span class="hero-stat">天台山整段舍弃</span>
+      <span class="hero-stat">南京南可直达仙居</span>
+      <span class="hero-stat">神仙居南门上、南门下</span>
+      <span class="hero-stat">G834 同车分流返程</span>
+    </div>
+  </div>
+</header>
+<nav class="nav"><div class="nav-inner"><a href="#decision">怎么改</a><a href="#tickets">买什么票</a><a href="#days">逐日计划</a><a href="#route">路线地图</a><a href="#scenery">看什么景</a><a href="#fallback">没票备选</a><a href="#sources">官方入口</a></div></nav>
+<main>
+<section id="decision">
+  <div class="section-head"><h2>先给结论：天台山全部舍弃，只改交通和住宿</h2><p>你 10 月 5 日才从南京出发，如果还硬塞天台山，最早也只能中午到，第二天再去仙居又会丢掉半天。最合理的改法是把天台山整段删掉，直接从南京进仙居。</p></div>
+  <div class="decision-grid">
+    <article class="decision-main">
+      <h3>新主线只有三件事</h3>
+      <p><strong>10 月 5 日：</strong>南京南坐 G9421，08:07 出发，10:42 到仙居；下午进白塔镇 / 神仙居南门住宿。</p>
+      <p><strong>10 月 6 日：</strong>05:30 出发，06:00 前到神仙居南门，南天索道 + 山体扶梯上山，南门上、南门下。</p>
+      <p><strong>10 月 7 日：</strong>优先买 G834，仙居 11:01 出发；朋友 12:20 在杭州西下车，你 14:14 到南京南。</p>
+      <div class="button-row">
+        <a class="button" href="https://www.12306.cn/" target="_blank" rel="noreferrer">打开铁路 12306</a>
+        <a class="button secondary" href="https://www.zjshenxianju.com/" target="_blank" rel="noreferrer">打开神仙居官网</a>
+      </div>
+    </article>
+    <aside class="decision-side">
+      <h3>这次舍弃什么</h3>
+      <ul class="cut-list">
+        <li><span class="rank-no red">删</span><span><strong>天台山大瀑布</strong><br>原计划的核心雨景，但 10/5 才从南京出发已经接不上。</span></li>
+        <li><span class="rank-no red">删</span><span><strong>国清寺</strong><br>原本放在 10/5 上午，新行程没有这个时间窗口。</span></li>
+        <li><span class="rank-no red">删</span><span><strong>石梁飞瀑 / 琼台仙谷</strong><br>本来只是备选，现在直接取消，避免赶路。</span></li>
+        <li><span class="rank-no red">删</span><span><strong>天台山 → 神仙居 12:30 直通车</strong><br>不再需要预订滴滴小程序里的这班车。</span></li>
+      </ul>
+    </aside>
+  </div>
+  <div class="notice alert" style="margin-top:16px"><strong>唯一必须优先锁定的是 10 月 6 日神仙居</strong><p>先把门票、索道和预约时段拿到手，再订酒店。如果 10 月 6 日神仙居没票，不要先去仙居再折返，直接把 10 月 5 日目的地改成缙云仙都。</p></div>
+</section>
+
+<section id="tickets">
+  <div class="section-head"><h2>都需要提前买什么，去哪买</h2><p>新方案比原计划少了很多票。现在只剩高铁、神仙居、住宿和可选接驳车。</p></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>要买什么</th><th>日期</th><th>去哪买</th><th>推荐班次 / 规则</th><th>紧急度</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>南京南 → 仙居 高铁</td>
+          <td>10 月 5 日</td>
+          <td><a class="link" href="https://www.12306.cn/" target="_blank" rel="noreferrer">铁路 12306</a> 官网或 App</td>
+          <td>首选 G9421 08:07—10:42；备选 G7581 09:18—12:02。越早到仙居，下午越从容。</td>
+          <td class="must">立刻买</td>
+        </tr>
+        <tr>
+          <td>神仙居门票 + 索道</td>
+          <td>10 月 6 日</td>
+          <td>微信搜索 <strong>神仙居旅游</strong> 小程序，或进入<a class="link" href="https://www.zjshenxianju.com/" target="_blank" rel="noreferrer">神仙居官网</a></td>
+          <td>实名分时段预约，建议至少提前 1 天。参考价：门票约 110 元，索道上行 65 元、下行 55 元。</td>
+          <td class="must">最高优先</td>
+        </tr>
+        <tr>
+          <td>南天顶</td>
+          <td>10 月 6 日</td>
+          <td>神仙居官方小程序</td>
+          <td>参考价约 99 元。能一起买就买；没买到不影响主线栈道，但会少一个高处观景点。</td>
+          <td class="best">建议买</td>
+        </tr>
+        <tr>
+          <td>神仙居南门接驳 / 观光车</td>
+          <td>10 月 6 日</td>
+          <td>官方小程序或南门现场扫码</td>
+          <td>如果官方产品含接驳车，优先买联票。坚持南门进、南门出，不要南北门混用。</td>
+          <td class="best">按官方产品买</td>
+        </tr>
+        <tr>
+          <td>仙居 → 杭州西 / 南京南 高铁</td>
+          <td>10 月 7 日</td>
+          <td><a class="link" href="https://www.12306.cn/" target="_blank" rel="noreferrer">铁路 12306</a></td>
+          <td>首选 G834：仙居 11:01 → 杭州西 12:20 → 南京南 14:14。朋友杭州西下车，你继续坐。备选 G9424 仙居 13:52 → 南京南 16:51。</td>
+          <td class="must">立刻买</td>
+        </tr>
+        <tr>
+          <td>住宿：白塔镇 / 神仙居南门</td>
+          <td>10 月 5 日</td>
+          <td>携程、美团、飞猪或高德地图酒店入口</td>
+          <td>为了 10 月 6 日 06:00 前到南门，这一晚住南门或白塔镇最合适。</td>
+          <td class="best">尽快订</td>
+        </tr>
+        <tr>
+          <td>住宿：仙居站附近</td>
+          <td>10 月 6 日</td>
+          <td>携程、美团、飞猪或高德地图酒店入口</td>
+          <td>10 月 7 日 11:01 的高铁，住仙居站附近最稳。若不想换酒店，也可两晚都住白塔镇，但要更早出发。</td>
+          <td class="best">尽快订</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="notice blue" style="margin-top:16px"><strong>买票顺序</strong><p>第 1 步抢 10/6 神仙居；第 2 步买 10/5 南京南到仙居；第 3 步买 10/7 G834；第 4 步订酒店。原因很简单：只要神仙居没票，整个目的地就要改成缙云仙都。</p></div>
+</section>
+
+<section id="days">
+  <div class="section-head"><h2>10 月 5 日到 7 日，逐日执行</h2><p>这个版本没有天台山，也不需要在杭州换乘。核心目标是把体力全部留给 10 月 6 日的神仙居。</p></div>
+  <div class="day-list">
+    <article class="day">
+      <div class="day-head"><div class="day-date">10 月 5 日</div><div><h3>南京南 → 仙居 → 白塔镇 / 南门</h3><p>核心任务：顺利到达，下午只做入住和次日确认。</p></div></div>
+      <div class="day-body">
+        <ol>
+          <li><strong>07:20 前到南京南站</strong>，优先坐 G9421 08:07—10:42 到仙居。买不到就坐 G7581 09:18—12:02。</li>
+          <li><strong>到达仙居站后直接去白塔镇 / 神仙居南门</strong>。不要把下午浪费在仙居县城来回折腾。</li>
+          <li><strong>13:30 前入住并吃饭</strong>。如果到得早，可轻量看桐江书院、永安溪一带；体力一般就休息，不为小景点加负担。</li>
+          <li><strong>16:30 去神仙居南门确认入口和接驳</strong>。问清 10 月 6 日最早入园、索道排队口和身份证核验方式。</li>
+          <li><strong>晚上逐项核对票</strong>：门票、索道、南天顶、预约时段、身份证、第二天雨具和早餐。</li>
+        </ol>
+        <div class="day-note"><strong>为什么不住仙居县城：</strong>10 月 6 日目标是 06:00 前到南门，住白塔镇或南门附近能把早起成本压到最低。</div>
+      </div>
+    </article>
+    <article class="day">
+      <div class="day-head"><div class="day-date">10 月 6 日</div><div><h3>神仙居：南门上、南门下</h3><p>核心任务：第一批入园，索道和扶梯优先，减少徒步。</p></div></div>
+      <div class="day-body">
+        <ol>
+          <li><strong>05:30 从白塔镇 / 南门附近出发</strong>，06:00 前到神仙居南门。国庆期间南、北门及索道 06:00 开始运营。</li>
+          <li><strong>06:00—06:30 坐南天索道上山</strong>，接山体扶梯。把主要爬升交给索道和扶梯，不要一开始就硬走台阶。</li>
+          <li><strong>07:00—09:30 看南天顶、如意桥、悬崖栈道</strong>。南天顶单独收费；没买到票就在外围观景平台看，不翻围栏。</li>
+          <li><strong>09:30—11:30 走核心主线观景台</strong>。看到排队过长就删支线，不追求把所有小景点走完。</li>
+          <li><strong>11:30—13:00 山上简餐或下山吃饭</strong>。14:30 前后回到南门，避免把返程拖得太晚。</li>
+          <li><strong>15:30 前离开神仙居</strong>，转去仙居站附近住宿。若仍住白塔镇，10 月 7 日必须更早出发。</li>
+        </ol>
+        <div class="day-note"><strong>少走路关键：</strong>南门上、南门下。南北门相距约 16 公里，南上北下会把返程接驳变复杂，也不适合不想走太多的人。</div>
+      </div>
+    </article>
+    <article class="day">
+      <div class="day-head"><div class="day-date">10 月 7 日</div><div><h3>仙居 → 杭州西 → 南京南</h3><p>核心任务：优先坐同一趟 G834，朋友杭州西下车，你继续回南京南。</p></div></div>
+      <div class="day-body">
+        <ol>
+          <li><strong>09:30 前到仙居站</strong>，给安检、进站和国庆客流留足时间。</li>
+          <li><strong>11:01 坐 G834 出发</strong>。朋友买仙居 → 杭州西，12:20 到站下车；你买仙居 → 南京南，14:14 到达。</li>
+          <li><strong>如果 G834 买不到</strong>：你改 G9424 仙居 13:52 → 南京南 16:51；朋友按 G3132 09:24 → 杭州西 10:36 或 G834 12:20 到达杭州西。</li>
+          <li><strong>不要强求两人同一趟车</strong>。G834 能同车当然最好；买不到就按各自终点分开买，返程会更稳。</li>
+        </ol>
+        <div class="day-note"><strong>G834 是这次改线后的最大好处：</strong>它同时经停杭州西和南京南，不需要像原计划那样在杭州西站内换乘。</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="route">
+  <div class="section-head"><h2>路线图：三天怎么走，一眼看清</h2><p>地图把去程、神仙居景区和返程分流分开。点击“没票备选”可以直接看缙云仙都替代路线。</p></div>
+  <div class="map-shell">
+    <div class="map-toolbar">
+      <button class="map-day active" type="button" data-route="all">全程</button>
+      <button class="map-day" type="button" data-route="d5">10/5 南京 → 仙居</button>
+      <button class="map-day" type="button" data-route="d6">10/6 神仙居</button>
+      <button class="map-day" type="button" data-route="d7">10/7 返程分流</button>
+      <button class="map-day" type="button" data-route="fallback">没票备选</button>
+    </div>
+    <div class="map-layout">
+      <div id="routeMap" role="img" aria-label="南京仙居神仙居三天路线地图"></div>
+      <aside class="map-side">
+        <h3 id="routeTitle">三天全程</h3>
+        <p id="routeDesc">南京南直达仙居，白塔镇住宿，神仙居南门上南门下，最后坐 G834 同车分流回杭州西和南京南。</p>
+        <ol class="route-stops" id="routeStops"></ol>
+        <div class="map-key">
+          <span><i style="background:#d97706"></i>高铁段</span>
+          <span><i style="background:#2563eb"></i>接驳 / 转场</span>
+          <span><i style="background:#15803d"></i>景区路线</span>
+          <span><i style="background:#b91c1c"></i>返程分流</span>
+        </div>
+      </aside>
+    </div>
+    <div class="map-footnote">路线线为行程方向示意，不代表铁路或公路的实际轨迹；景区内部仅标出南门和南天索道方向。出发前以高德地图实时导航、铁路 12306 和景区现场指引为准。</div>
+  </div>
+</section>
+
+<section id="scenery">
+  <div class="section-head"><h2>这一趟主要看什么景</h2><p>舍弃天台山之后，强景观集中在神仙居。10 月 5 日下午不再硬塞大景区，10 月 6 日把好天气和体力都留给核心岩峰、栈道和如意桥。</p></div>
+  <div class="scenery-grid">
+    <article class="scenery-card">
+      <img src="./assets_zj_mountains_2026_web/shenxianju_bridge.jpg" alt="神仙居如意桥">
+      <div><h3>如意桥 / 悬崖栈道</h3><p>神仙居最有辨识度的视角之一。建议早上先走这里，避开中午后的排队。</p></div>
+    </article>
+    <article class="scenery-card">
+      <img src="./assets_zj_mountains_2026_web/shenxianju_cliff.jpg" alt="神仙居岩峰与悬崖栈道">
+      <div><h3>岩峰群 / 南天顶</h3><p>岩峰、深谷和高空栈道是核心景观。南天顶单独收费，能买就买，不买也能看主线。</p></div>
+    </article>
+    <article class="scenery-card">
+      <img src="./assets_zj_mountains_2026_web/shenxianju_4.jpg" alt="神仙居山体与观景平台">
+      <div><h3>索道 + 山体扶梯</h3><p>这是少走路的关键组合。优先坐索道和扶梯，把体力留给最值得看的观景平台。</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="fallback">
+  <div class="section-head"><h2>抢不到神仙居，整段改缙云仙都</h2><p>不要在 10 月 5 日先到仙居，再临时折返缙云。要换就从上车的终点开始换。</p></div>
+  <div class="fallback-grid">
+    <article class="fallback-card">
+      <h3>10 月 5 日：南京南 → 缙云西</h3>
+      <p>可选 G7625 06:48—09:59、G7349 07:37—11:38、G7627 08:55—12:01。住缙云西站附近，10 月 6 日玩仙都。</p>
+    </article>
+    <article class="fallback-card">
+      <h3>10 月 6 日：缙云仙都</h3>
+      <p>官方购票：微信搜索 <strong>缙云仙都景区</strong>，或进入<a class="link" href="https://www.zgxdly.cn/" target="_blank" rel="noreferrer">仙都景区官网</a>。优先买含景交车的票，减少步行和转场。</p>
+    </article>
+    <article class="fallback-card">
+      <h3>10 月 7 日：返程</h3>
+      <p>从缙云西回南京南或杭州。买票时先看 12306 联程，不要在仙居和缙云之间来回折返。</p>
+    </article>
+    <article class="fallback-card">
+      <h3>判断时间点</h3>
+      <p>最好在出发前就确认 10 月 6 日神仙居是否有票。如果到 10 月 4 日晚上仍没有预约成功，直接按缙云方案订票和住宿。</p>
+    </article>
+  </div>
+  <div class="scenery-grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
+    <article class="scenery-card">
+      <img src="./assets_zj_mountains_2026_web/xiandu_2.jpg" alt="缙云仙都山水景观">
+      <div><h3>缙云仙都备选</h3><p>神仙居没票时，南京南到缙云西的班次更多，整段改线比先到仙居再折返更顺。</p></div>
+    </article>
+    <article class="scenery-card">
+      <img src="./assets_zj_mountains_2026_web/xiandu_4.jpg" alt="缙云仙都岩峰与水面">
+      <div><h3>少走路玩法</h3><p>优先景交车串联主要观景点，不要把仙都当成长距离徒步路线。</p></div>
+    </article>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="section-head"><h2>官方入口汇总</h2><p>出发前再确认一次车次、余票、景区预约和索道运营。国庆规则可能临时调整。</p></div>
+  <div class="sources">
+    <a class="source" href="https://www.12306.cn/" target="_blank" rel="noreferrer"><strong>铁路 12306</strong>南京南 → 仙居、仙居 → 杭州西 / 南京南。火车票唯一官方入口。</a>
+    <a class="source" href="https://www.zjshenxianju.com/" target="_blank" rel="noreferrer"><strong>神仙居景区官网</strong>官方公告、平台入口和景区信息。微信小程序搜索“神仙居旅游”。</a>
+    <a class="source" href="https://www.zjshenxianju.com/pwxx.jhtml" target="_blank" rel="noreferrer"><strong>神仙居票务信息</strong>门票约 110 元、索道上行 65 元 / 下行 55 元、南天顶约 99 元。</a>
+    <a class="source" href="https://tidenews.com.cn/tmh_news.html?id=6abc737375174d000143e33c" target="_blank" rel="noreferrer"><strong>神仙居国庆运营公告</strong>10 月 1 日至 7 日 06:00 开始运营，实名分时段预约。</a>
+    <a class="source" href="https://www.zgxdly.cn/" target="_blank" rel="noreferrer"><strong>缙云仙都景区官网</strong>神仙居没票时的官方备选入口。微信搜索“缙云仙都景区”。</a>
+  </div>
+</section>
+</main>
+<footer>页面生成于 2026 年 10 月 3 日。火车票、景区预约、索道和天气信息请在出发前通过 12306、景区官方公众号 / 小程序和现场公告再次确认。图片来自 Wikimedia Commons 及景区公开信息，仅用于行程判断。</footer>
+<script>window._AMapSecurityConfig={securityJsCode:"160dc61b65bc63224ccc6209c82a1a55"};</script>
+<script src="https://webapi.amap.com/maps?v=2.0&key=513a33975e6996cf0a71a603b18c0d3d&plugin=AMap.Scale,AMap.ToolBar"></script>
+<script>
+(() => {
+  const mapEl = document.getElementById("routeMap");
+  if (!mapEl) return;
+  if (typeof AMap === "undefined") {
+    mapEl.innerHTML = '<div style="display:grid;place-items:center;height:100%;padding:30px;text-align:center;color:#b33a31;font-size:14px">高德地图加载失败，请检查网络后刷新页面。路线文字仍可正常查看。</div>';
+    return;
+  }
+
+  const points = {
+    njsouth:  {name:"南京南站", lng:118.796786, lat:31.970968, kind:"rail"},
+    xjstation:{name:"仙居站", lng:120.644102, lat:28.821816, kind:"rail"},
+    baita:    {name:"白塔镇", lng:120.601294, lat:28.750404, kind:"stay"},
+    south:    {name:"神仙居南门", lng:120.593148, lat:28.677152, kind:"spot"},
+    cable:    {name:"南天索道下站", lng:120.599856, lat:28.673270, kind:"spot"},
+    nantian:  {name:"南天顶 / 如意桥", lng:120.604800, lat:28.684500, kind:"spot"},
+    hzwest:   {name:"杭州西站", lng:119.986781, lat:30.297932, kind:"rail"},
+    jinyun:   {name:"缙云西站", lng:120.034000, lat:28.671000, kind:"rail"},
+    xiandu:   {name:"缙云仙都", lng:120.125000, lat:28.665000, kind:"spot"}
+  };
+
+  const routes = {
+    all: {
+      title:"三天全程",
+      desc:"南京南直达仙居，白塔镇住宿，神仙居南门上南门下，最后坐 G834 同车分流回杭州西和南京南。",
+      points:["njsouth","xjstation","baita","south","cable","nantian","hzwest"],
+      segments:[
+        ["njsouth","xjstation","#d97706"],["xjstation","baita","#2563eb"],["baita","south","#15803d"],
+        ["south","cable","#15803d"],["cable","nantian","#15803d"],["xjstation","hzwest","#b91c1c"],["hzwest","njsouth","#b91c1c"]
+      ],
+      stops:[
+        ["南京南站","10/5 G9421 08:07 出发"],
+        ["仙居站","10/5 10:42 到达，转白塔镇"],
+        ["白塔镇 / 南门住宿","10/5 下午入住，确认次日入口"],
+        ["神仙居南门","10/6 06:00 前到达"],
+        ["南天索道 + 山体扶梯","优先坐索道，减少爬升"],
+        ["南天顶 / 如意桥 / 栈道","10/6 上午核心景观"],
+        ["杭州西站 / 南京南站","10/7 G834：朋友杭州西下车，你回南京南"]
+      ]
+    },
+    d5: {
+      title:"10 月 5 日 · 南京南 → 仙居",
+      desc:"南京南坐 G9421 到仙居，随后直接去白塔镇或神仙居南门住宿，不绕仙居县城。",
+      points:["njsouth","xjstation","baita","south"],
+      segments:[["njsouth","xjstation","#d97706"],["xjstation","baita","#2563eb"],["baita","south","#15803d"]],
+      stops:[["南京南站","G9421 08:07—10:42"],["仙居站","出站后直接去白塔镇"],["白塔镇 / 南门住宿","13:30 前入住"],["神仙居南门","16:30 确认次日入口"]]
+    },
+    d6: {
+      title:"10 月 6 日 · 神仙居",
+      desc:"南门上、南门下。南天索道接山体扶梯，主线看南天顶、如意桥和悬崖栈道。",
+      points:["baita","south","cable","nantian"],
+      segments:[["baita","south","#15803d"],["south","cable","#15803d"],["cable","nantian","#15803d"],["nantian","south","#15803d"]],
+      stops:[["白塔镇 / 南门住宿","05:30 出发"],["神仙居南门","06:00 前排队入园"],["南天索道 + 扶梯","先上山再走主线"],["南天顶 / 如意桥 / 栈道","14:30 前后回南门"]]
+    },
+    d7: {
+      title:"10 月 7 日 · 返程分流",
+      desc:"优先同一趟 G834：仙居 11:01 出发，杭州西 12:20，南京南 14:14。朋友杭州西下车，你继续坐。",
+      points:["south","xjstation","hzwest","njsouth"],
+      segments:[["south","xjstation","#2563eb"],["xjstation","hzwest","#d97706"],["hzwest","njsouth","#b91c1c"]],
+      stops:[["神仙居 / 仙居住宿","09:30 前到仙居站"],["仙居站","G834 11:01 出发"],["杭州西站","12:20 到达，朋友下车"],["南京南站","14:14 到达"]]
+    },
+    fallback: {
+      title:"没票备选 · 缙云仙都",
+      desc:"如果 10 月 6 日神仙居没票，10 月 5 日直接改去缙云，不要先到仙居再折返。",
+      points:["njsouth","jinyun","xiandu"],
+      segments:[["njsouth","jinyun","#d97706"],["jinyun","xiandu","#2563eb"]],
+      stops:[["南京南站","可选 G7625 / G7349 / G7627"],["缙云西站","10/5 到达后住附近"],["缙云仙都","10/6 景交车串联主要观景点"]]
+    }
+  };
+
+  const colorByKind = {rail:"#d97706", bus:"#2563eb", spot:"#15803d", stay:"#7c3aed"};
+  const map = new AMap.Map("routeMap", {zoom:7, center:[119.75,29.75], viewMode:"2D", resizeEnable:true});
+  map.addControl(new AMap.Scale());
+  map.addControl(new AMap.ToolBar({position:"RB"}));
+  const markers = {};
+  const polylines = [];
+
+  Object.entries(points).forEach(([key,p]) => {
+    const color = colorByKind[p.kind] || "#546e7a";
+    const marker = new AMap.Marker({
+      position:[p.lng,p.lat],
+      title:p.name,
+      offset:new AMap.Pixel(-10,-10),
+      content:`<div title="${p.name}" style="width:20px;height:20px;border-radius:50%;background:${color};border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)"></div>`,
+      label:{content:`<span style="background:${color};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px">${p.name}</span>`,direction:"top",offset:new AMap.Pixel(0,-4)}
+    });
+    marker.on("click", () => new AMap.InfoWindow({
+      content:`<div style="padding:8px 6px"><strong>${p.name}</strong><div style="margin-top:5px;color:#61706b;font-size:12px">${p.kind === "rail" ? "铁路节点" : p.kind === "stay" ? "住宿区域" : "行程节点"}</div></div>`,
+      offset:new AMap.Pixel(0,-24)
+    }).open(map,[p.lng,p.lat]));
+    markers[key] = marker;
+    map.add(marker);
+  });
+
+  function renderRoute(key){
+    const r = routes[key];
+    Object.entries(markers).forEach(([k,m]) => r.points.includes(k) ? m.show() : m.hide());
+    polylines.forEach(line => map.remove(line));
+    polylines.length = 0;
+    r.segments.forEach(([a,b,color]) => {
+      const line = new AMap.Polyline({
+        path:[[points[a].lng,points[a].lat],[points[b].lng,points[b].lat]],
+        strokeColor:color,
+        strokeWeight:5,
+        strokeOpacity:.9,
+        lineJoin:"round",
+        lineCap:"round",
+        strokeStyle:"solid",
+        zIndex:30
+      });
+      map.add(line);
+      polylines.push(line);
+    });
+    document.getElementById("routeTitle").textContent = r.title;
+    document.getElementById("routeDesc").textContent = r.desc;
+    document.getElementById("routeStops").innerHTML = r.stops.map((s,i)=>`<li><span class="route-stop-no">${i+1}</span><div><strong>${s[0]}</strong><span>${s[1]}</span></div></li>`).join("");
+    document.querySelectorAll(".map-day").forEach(btn => btn.classList.toggle("active", btn.dataset.route === key));
+    const visible = r.points.map(k=>markers[k]);
+    if (visible.length === 1) map.setZoomAndCenter(14,[points[r.points[0]].lng,points[r.points[0]].lat]);
+    else map.setFitView(visible, false, [70,70,70,70]);
+  }
+
+  document.querySelectorAll(".map-day").forEach(btn => btn.addEventListener("click",()=>renderRoute(btn.dataset.route)));
+  renderRoute("all");
+})();
+</script>
+</body>
+</html>
